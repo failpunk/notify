@@ -1,0 +1,94 @@
+#notify-box {
+    position: fixed;
+    z-index: 999999;
+    top: 25px;
+    margin: 0 15px;
+}
+
+#notify-box.top-right {
+    right: 15px;
+}
+
+#notify-box.top-left {
+    left: 15px;
+}
+
+#notify-box.top-middle {
+    width: 100%;
+}
+
+#notify-box.top-middle .notify {
+    margin: auto;
+    min-width: 100px;
+    max-width: 500px;
+}
+
+#notify-box .notify {
+    position: relative;
+    padding: 25px 40px 25px 20px;
+    color: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#notify-box .notify:first-child {
+    margin: 0;
+}
+
+#notify-box .notify.success {
+    background-color: #DFF0D8;
+    border: 1px solid #D6E9C6;
+    color: #3C763D;
+}
+
+#notify-box .notify.success .notify-close span {
+    color: #BED7B8;
+}
+
+#notify-box .notify.error {
+    background-color: #f0d8dc;
+    border: 1px solid #e9c6d2;
+    color: #60251C;
+}
+
+#notify-box .notify.error .notify-close span {
+    color: #D7B8BB;
+}
+
+#notify-box .notify .notify-title {
+    margin: 0 0 10px;
+}
+
+#notify-box .notify .notify-message {
+    margin: 0;
+    padding-right: 10px;
+}
+
+#notify-box .notify .notify-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+#notify-box .notify .notify-close span {
+    font-size: 28px;
+}
+
+#notify-box .notify .notify-close:hover {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 640px) {
+    #notify-box.top-middle {
+        margin: auto;
+    }
+
+    #notify-box.top-middle .notify {
+        margin: 0 15px;
+        width: auto;
+    }
+}

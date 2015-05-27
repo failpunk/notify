@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Notify Example</title>
+  <link rel="stylesheet" href="../src/notify.css"/>
+</head>
+<body>
+
+  <a id="notify-success" href="">Success!</a>
+  <a id="notify-error" href="">Error!</a>
+  <a id="notify-left" href="">Left</a>
+  <a id="notify-middle" href="">Middle</a>
+  <a id="notify-timeout" href="">Timeout</a>
+
+  <script type="text/javascript" src="../bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../src/notify.js"></script>
+  <script type="text/javascript">
+    $('#notify-success').on('click', function(event) {
+      event.preventDefault();
+      Notifier.msg({message: 'Excellent work sir!', timeout: 2000});
+    })
+
+    $('#notify-error').on('click', function(event) {
+      event.preventDefault();
+      Notifier.msg({message: 'You have a big fat problem!', timeout: 2000});
+    })
+
+    $('#notify-left').on('click', function(event) {
+      event.preventDefault();
+      Notifier.msg({message: 'This message is obviously on the left', location: 'top-left'});
+    })
+
+    $('#notify-middle').on('click', function(event) {
+      event.preventDefault();
+      Notifier.msg({message: 'Yeah, right in the middle.', location: 'top-middle'});
+    })
+
+    $('#notify-timeout').on('click', function(event) {
+      event.preventDefault();
+      Notifier.msg({message: "I'm outta here in three seconds!", timeout: 3000});
+    })
+  </script>
+
+
+</body>
+</html>
