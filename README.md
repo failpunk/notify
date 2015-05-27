@@ -1,4 +1,4 @@
-# notify
+# Notify
 ## A Dirt-Simple Notification System
 
 ### Install
@@ -31,7 +31,7 @@ Notify.msg({
 
 #### No Close Button
 ```js
-Notifier.msg({
+Notify.msg({
   message: 'I will fade out after two seconds',
   timeout: 2000
 });
